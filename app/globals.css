@@ -1,14 +1,38 @@
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-html,
+:root {
+  --color-bg: #2c2c32;
+  --color-active: #0f7dc6;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: var(--color-bg);
+  padding: 2rem 0;
   text-align: center;
+}
+header > a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+header > a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
 }
 
 .container {
@@ -24,37 +48,31 @@ main {
   padding-bottom: 1.5rem;
 }
 
-main {
+main a {
   text-decoration: none;
-
-  a {
-    text-decoration: none;
-    /* color: #ffffff10; */
-  }
-  main a:hover {
-    text-decoration: underline;
-  }
+  color: var(--color-bg);
 }
-
-header {
-  background-color: #443f3f;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
+main a:hover {
+  text-decoration: underline;
 }
 
 .active {
-  color: blueviolet;
+  color: var(--color-active);
   cursor: default;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form button {
+  background-color: var(--color-active);
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+input[type="search"] {
+  padding: 0.5rem 1rem;
 }
